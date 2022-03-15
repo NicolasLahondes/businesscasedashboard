@@ -1,0 +1,36 @@
+<app-header></app-header>
+<app-first-panel></app-first-panel>
+<div class="pt-2 bg-dark ">
+  <div class="row text-center mx-3">
+    <div class="col-md-3 col-sm-12 col-lg-6">
+      <app-display-chart [products]="products" chartTitle="Meilleures ventes"></app-display-chart>
+      <div class="row mt-5">
+        <app-display-type2 class="col-md-3 col-sm-12 col-lg-5  bgChanged text-white mx-auto"
+          nameInfo="Total Vente Janvier" [numberPassed]="614">
+        </app-display-type2>
+        <app-display-type2 class="col-md-3 col-sm-12 col-lg-5 bgChanged text-white mx-auto"
+          nameInfo="Val. Panier Moyen en €" [numberPassed]="58.45">
+        </app-display-type2>
+      </div>
+
+      <div class="row mt-5">
+        <app-display-type2 class="col-md-3 col-sm-12 col-lg-5  bgChanged text-white mx-auto"
+          nameInfo="Clients réccurents" [numberPassed]="57">
+        </app-display-type2>
+        <app-display-type2 class="col-md-3 col-sm-12 col-lg-5 bgChanged text-white mx-auto"
+          nameInfo="Nmb. Panier abandonnés" [numberPassed]="17">
+        </app-display-type2>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12 col-lg-6">
+      <div>
+        <div *ngFor="let product of products; index as i" id="section1">
+          <app-product-line-ranking class="borderRound" [photoPath]="product.photoPath" [productName]="product.name"
+            [totalSales]="product.nbCmd" [id]="i+1">
+          </app-product-line-ranking>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

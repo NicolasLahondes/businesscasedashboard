@@ -1,0 +1,15 @@
+.borderRound {
+  border-radius: 10px 10px;
+}
+
+.borderImg {
+  border-radius: 100px;
+}
+
+#salesText {
+  font-size: 30px;
+}
+
+.bgCell {
+  background-color: rgb(15, 142, 201);
+}

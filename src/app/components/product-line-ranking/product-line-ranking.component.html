@@ -1,0 +1,24 @@
+<div class="bgCell row my-4 borderRound" style="height:70px">
+  <div class="col-1">
+    <div class="d-flex text-warning" style="height: 60px; width: 60px; margin-bottom: 0px;">
+      <p class="align-self-center ">{{"#" + id}}</p>
+    </div>
+  </div>
+  <div class="col-1 d-flex" style="
+    padding-left: 5px;">
+    <img src="{{photoPath}}" style="width: 60px; height: 60px" class="borderImg align-self-center">
+  </div>
+  <div class="col-4 d-flex justify-content-start ">
+    <p class="align-self-center text-white" style="
+    margin-bottom: 0px;
+">{{productName}}</p>
+  </div>
+  <div class="col-6 d-flex justify-content-end ">
+    <p class="align-self-center text-white" style="
+    margin-bottom: 0px;
+">Ventes Totales: </p>
+    <p id="salesText" class="align-self-center text-warning" style="
+    margin-bottom: 0px; padding-left: 10px;
+">{{totalSales}}</p>
+  </div>
+</div>

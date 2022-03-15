@@ -1,0 +1,45 @@
+<div class="bg-warning">
+  <div class="container px-4 py-4" id="featured-3">
+    <h2 class="pb-2 border-bottom text-center text-white">
+      {{ date | date: "fullDate" }}
+    </h2>
+    <h3 class="text-center text-white mb-5">
+      Les résultats s'affiche pour la période de
+    </h3>
+    <div id="monthDisplayDiv">
+      <div class="d-flex justify-content-center">
+        <select id="status " formControlName="status" class="form-control monthDisplay">
+          <option *ngFor="let month of arrayMonth; index as i" value="Libre" class="text-center">
+            {{ arrayMonth[i] }}
+          </option>
+        </select>
+        <div class="mx-4 my-auto">
+          <h2 class="text-white text">a</h2>
+        </div>
+        <select id="status " formControlName="status " class="form-control monthDisplay">
+          <option *ngFor="let month of arrayMonth; index as i" value="Libre" class="text-center">
+            {{ arrayMonth[i] }}
+          </option>
+        </select>
+      </div>
+      <div class="
+          d-flex
+          justify-content-center
+          row
+          g-4
+          py-5
+          row-cols-1 row-cols-lg-3
+          text-white
+        ">
+        <div class="feature col text-center">
+          <h2>Total Ventes</h2>
+          <app-display-number [fontSizePushed]="100" [numberToDown]="16245"></app-display-number>
+        </div>
+        <div class="feature col text-center">
+          <h2>Nombre de visite</h2>
+          <app-display-number [fontSizePushed]="100" [numberToDown]="4756"></app-display-number>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
